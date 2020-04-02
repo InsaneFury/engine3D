@@ -131,7 +131,7 @@ void Entity::setPosition(vec3 newTranslation)
 
 	glGetIntegerv(GL_VIEWPORT, m_viewport);
 
-	position = glm::project(vec3(newTranslation.x, newTranslation.y, newTranslation.z), model, currentRenderer.GetProjection(), vec4(m_viewport[0], m_viewport[1], m_viewport[2], m_viewport[3]));
+	//position = glm::project(vec3(newTranslation.x, newTranslation.y, newTranslation.z), model, currentRenderer.GetProjection(), vec4(m_viewport[0], m_viewport[1], m_viewport[2], m_viewport[3]));
 }
 
 vec3 Entity::getPosition()

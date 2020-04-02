@@ -21,7 +21,7 @@ Renderer::Renderer()
 	proj = glm::mat4(1.0f);
 	uniView = 0;
 	uniProj = 0;
-	SetProjection();
+	SetProjection(Perspective);
 	SetView();
 }
 
@@ -124,16 +124,12 @@ void Renderer::SetShader(unsigned int shader)
 	glUseProgram(shader);
 }
 
-void Renderer::SetProjection()
+void Renderer::SetProjection(Projection p)
 {
-	proj = glm::ortho(
-		-1.0f,
-		1.f,
-		-1.f,
-		1.0f,
-		0.0f,
-		100.f
-	);
+	if(p == Perspective)
+	proj = glm::perspective(45.0f, (float)(1024 / 720), 0.1f, 100.0f);
+	else
+	proj = glm::ortho(-1.0f, 1.f, -1.f, 1.0f, 0.0f, 100.f);
 }
 
 void Renderer::SetView()

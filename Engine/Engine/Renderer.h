@@ -28,6 +28,12 @@ namespace Engine
 
 	class DLLEXPORT Renderer
 	{
+		enum Projection
+		{
+			Perspective,
+			Orthographic
+		};
+
 	private:
 		Color color;
 		float _red;
@@ -38,7 +44,7 @@ namespace Engine
 		mat4 proj;
 		GLuint uniView;
 		GLuint uniProj;
-		void SetProjection();
+		void SetProjection(Projection projection);
 		void SetView();
 	public:
 		Renderer();

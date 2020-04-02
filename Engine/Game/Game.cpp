@@ -42,6 +42,8 @@ void Game::Update(Time deltaTime)
 	timer += deltaTime;
 	sprite.BoxCollider.CollisionDetection(sprite.getPosition(), sprite2.getPosition(), sprite.size(), sprite2.size());
 
+	
+
 	if (input.getKey(GLFW_KEY_D))
 	{
 		sprite.UpdateSprite(4, false, timer);
@@ -57,14 +59,14 @@ void Game::Update(Time deltaTime)
 	if (input.getKey(GLFW_KEY_W))
 	{
 		sprite.UpdateSprite(3, false, timer);
-		sprite.setPosition(vec3(0, 1 * deltaTime, 0));
+		sprite.setPosition(vec3(0,0, -1 * deltaTime));
 
 	}
 
 	if (input.getKey(GLFW_KEY_S))
 	{
 		sprite.UpdateSprite(5, false, timer);
-		sprite.setPosition(vec3(0, -1 * deltaTime, 0));
+		sprite.setPosition(vec3(0, 0, 1 * deltaTime));
 	}
 	if (timerSprite <= 10)
 	{
