@@ -21,7 +21,7 @@ Renderer::Renderer()
 	proj = glm::mat4(1.0f);
 	uniView = 0;
 	uniProj = 0;
-	SetProjection(Perspective);
+	SetProjection(Perspective); 
 	SetView();
 }
 
