@@ -1,3 +1,0 @@
-﻿  Importer.cpp
-c:\users\hardsite\desktop\engine3d\engine\importer\importer.cpp(27): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-  Importer.vcxproj -> C:\Users\HARDSITE\Desktop\engine3D\Engine\Debug\Importer.exe

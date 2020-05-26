@@ -4,6 +4,9 @@ Engine/[Bb]in/
 #Ignore obj
 Engine/[Oo]bj/
 
+#Files
+Engine/[Dd]ebug/
+
 #Ignore .vs except .suo
 **/.vs
 .vs\Engine\v15\!.suo
